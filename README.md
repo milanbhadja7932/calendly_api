@@ -25,3 +25,15 @@ The request we just made had a status code of 200. Status codes are returned wit
 403 -- the resource you're trying to access is forbidden -- you don't have the right permissions to see it.</br>
 404 -- the resource you tried to access wasn't found on the server.</br>
   
+# Get request Example
+import requests
+response = requests.get("url-here", headers=headers)
+hello_world = response.json()
+print("hello_world:", hello_world)
+
+# Post Request
+payload = {"name": "learning-about-apis"}
+response = requests.post("url here", json=payload, headers=headers)
+status = response.status_code
+print("response.status_code:", response.status_code)
+
